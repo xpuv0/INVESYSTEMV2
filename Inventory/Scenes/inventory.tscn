@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://bm6upu5vx75cm"]
 
 [ext_resource type="Script" path="res://Inventory/Scripts/inventory.gd" id="1_xihj1"]
-[ext_resource type="Script" path="res://Inventory/Scripts/inventory_base_class.gd" id="2_n8310"]
+[ext_resource type="Script" path="res://Inventory/Scripts/inventory_data_base_class.gd" id="2_n8310"]
 [ext_resource type="Script" path="res://Inventory/Scripts/slot_data_base_class.gd" id="3_2kooy"]
 [ext_resource type="PackedScene" uid="uid://cbykfxnt73jxk" path="res://Inventory/Scenes/slot.tscn" id="4_0dkss"]
 
@@ -97,12 +97,12 @@ quantity = 0
 script = ExtResource("2_n8310")
 slot_datas = Array[ExtResource("3_2kooy")]([SubResource("Resource_ss8hl")])
 
-[sub_resource type="Resource" id="Resource_i3m3m"]
+[sub_resource type="Resource" id="Resource_rbd2p"]
 resource_local_to_scene = true
 script = ExtResource("3_2kooy")
 quantity = 0
 
-[sub_resource type="Resource" id="Resource_swwtv"]
+[sub_resource type="Resource" id="Resource_70854"]
 resource_local_to_scene = true
 script = ExtResource("3_2kooy")
 quantity = 0
@@ -163,7 +163,7 @@ grow_vertical = 2
 
 [node name="PickaxeSlot" parent="EquipmentContainer" instance=ExtResource("4_0dkss")]
 layout_mode = 2
-slot_data = SubResource("Resource_i3m3m")
+slot_data = SubResource("Resource_rbd2p")
 slot_type = "Pickaxe"
 
 [node name="GrabbedSlot" parent="." instance=ExtResource("4_0dkss")]
@@ -173,4 +173,4 @@ layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
 mouse_filter = 2
-slot_data = SubResource("Resource_swwtv")
+slot_data = SubResource("Resource_70854")

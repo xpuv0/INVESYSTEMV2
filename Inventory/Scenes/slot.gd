@@ -52,5 +52,3 @@ func type_check(item : Item) -> bool:
 	if slot_type != "Normal":
 		return (slot_type_dictionary[slot_type].instance_has(item))
 	return true
-
-
