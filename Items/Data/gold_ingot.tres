@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cy6c633wuj2cv"]
+
+[ext_resource type="Script" path="res://Items/Scripts/item_base_class.gd" id="1_tstah"]
+[ext_resource type="Texture2D" uid="uid://fmlen2elkmyx" path="res://Items/Assets/Gems/gold_ingot.png" id="2_xn4ju"]
+
+[resource]
+script = ExtResource("1_tstah")
+id = "gold_ingot"
+name = "Gold Ingot"
+texture = ExtResource("2_xn4ju")
+description = "Chicken nuggets"
+stackable = true
+value = 25
+rarity = "Rare"
+slot_type = "Normal"

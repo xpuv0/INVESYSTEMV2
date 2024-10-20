@@ -1,0 +1,166 @@
+[gd_scene load_steps=29 format=3 uid="uid://bm6upu5vx75cm"]
+
+[ext_resource type="Script" path="res://Inventory/Scripts/inventory.gd" id="1_xihj1"]
+[ext_resource type="Script" path="res://Inventory/Scripts/inventory_base_class.gd" id="2_n8310"]
+[ext_resource type="Script" path="res://Inventory/Scripts/slot_data_base_class.gd" id="3_2kooy"]
+[ext_resource type="PackedScene" uid="uid://cbykfxnt73jxk" path="res://Inventory/Scenes/slot.tscn" id="4_0dkss"]
+
+[sub_resource type="Resource" id="Resource_o6kjc"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_5ovp0"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_00tre"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_801ge"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_nvwf4"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_4fq3m"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_psak7"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_0dk50"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_xt16o"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_70ydg"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_0js6w"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_gggh0"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_pvw7m"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_pyrin"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_ayvyt"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_sh423"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_whv46"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_njkau"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_y1p4m"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_o0dyu"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_guo8r"]
+script = ExtResource("2_n8310")
+slot_datas = Array[ExtResource("3_2kooy")]([SubResource("Resource_o6kjc"), SubResource("Resource_5ovp0"), SubResource("Resource_00tre"), SubResource("Resource_801ge"), SubResource("Resource_nvwf4"), SubResource("Resource_4fq3m"), SubResource("Resource_psak7"), SubResource("Resource_0dk50"), SubResource("Resource_xt16o"), SubResource("Resource_70ydg"), SubResource("Resource_0js6w"), SubResource("Resource_gggh0"), SubResource("Resource_pvw7m"), SubResource("Resource_pyrin"), SubResource("Resource_ayvyt"), SubResource("Resource_sh423"), SubResource("Resource_whv46"), SubResource("Resource_njkau"), SubResource("Resource_y1p4m"), SubResource("Resource_o0dyu")])
+
+[sub_resource type="Resource" id="Resource_7cvpg"]
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_6ojf1"]
+script = ExtResource("2_n8310")
+slot_datas = Array[ExtResource("3_2kooy")]([SubResource("Resource_7cvpg")])
+
+[sub_resource type="Resource" id="Resource_swwtv"]
+resource_local_to_scene = true
+script = ExtResource("3_2kooy")
+quantity = 0
+
+[node name="Inventory" type="Control"]
+custom_minimum_size = Vector2(640, 320)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xihj1")
+inventory_data = SubResource("Resource_guo8r")
+equipment_data = SubResource("Resource_6ojf1")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlotContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(240, 300)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -392.0
+offset_top = -150.0
+offset_right = -32.0
+offset_bottom = 150.0
+grow_horizontal = 0
+grow_vertical = 2
+columns = 5
+
+[node name="EquipmentContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(160, 274)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -137.0
+offset_right = 192.0
+offset_bottom = 137.0
+grow_vertical = 2
+
+[node name="GrabbedSlot" parent="." instance=ExtResource("4_0dkss")]
+modulate = Color(1, 1, 1, 0.392157)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+slot_data = SubResource("Resource_swwtv")

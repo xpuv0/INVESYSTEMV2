@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Pickaxe" load_steps=3 format=3 uid="uid://bt7dj6i6eavl8"]
+
+[ext_resource type="Script" path="res://Items/Scripts/pickaxe_base_class.gd" id="1_k8so8"]
+[ext_resource type="Texture2D" uid="uid://dmx3bw0m80nw8" path="res://Items/Assets/Pickaxes/golden_pickaxe.png" id="2_ps8hk"]
+
+[resource]
+script = ExtResource("1_k8so8")
+damage = 2
+breaking_power = 3
+id = "golden_pickaxe"
+name = "Golden Pickaxe"
+texture = ExtResource("2_ps8hk")
+description = "Usable chicken nuggets"
+stackable = false
+value = 50
+rarity = "Epic"
+slot_type = "Pickaxe"
